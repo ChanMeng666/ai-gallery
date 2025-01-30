@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Art Gallery</title>
+    <link rel="stylesheet" href="css/utils/variables.css">
+    <link rel="stylesheet" href="css/utils/animations.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/gallery.css">
+    <link rel="stylesheet" href="css/components/modal.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="hover-glow ripple">HOME</a>
+            <a href="#images">IMAGES</a>
+            <a href="#music">MUSIC</a>
+            <a href="#videos">VIDEOS</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1 class="fade-in">AI ART GALLERY</h1>
+        </section>
+
+        <section id="images" class="gallery-section">
+            <h2 class="fade-in">AI Generated Images</h2>
+            <div class="gallery-grid"></div>
+        </section>
+    </main>
+
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 AI Art Gallery. All rights reserved.</p>
+    </footer>
+
+
+    <script src="https://unpkg.com/lenis@1.0.16/dist/lenis.min.js"></script>
+
+    <script src="data/gallery-data.js"></script>
+    <script src="js/modules/utils.js"></script>
+    <script src="js/modules/gallery.js"></script>
+    <script src="js/modules/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

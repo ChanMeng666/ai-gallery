@@ -1,0 +1,18 @@
+:root {
+    /* Colors */
+    --color-background: #171717;
+    --color-primary: #17f700;
+    --color-text: #f7f7f7;
+    
+    /* Typography */
+    --font-main: system-ui, -apple-system, sans-serif;
+    
+    /* Spacing */
+    --spacing-small: 1rem;
+    --spacing-medium: 2rem;
+    --spacing-large: 4rem;
+    
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-medium: 0.5s ease;
+}
