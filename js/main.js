@@ -43,4 +43,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Initialize image gallery
+    const imageGallery = document.querySelector('#images .gallery-grid');
+    if (imageGallery) {
+        new Gallery(imageGallery, galleryData.images);
+    }
+
+    // Initialize audio gallery
+    const audioGallery = document.querySelector('#music .gallery-grid');
+    if (audioGallery) {
+        new AudioPlayer(audioGallery, galleryData.music);
+    }
 });

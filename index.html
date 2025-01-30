@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/components/gallery.css">
     <link rel="stylesheet" href="css/components/modal.css">
     <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/audio-player.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -31,6 +32,12 @@
             <h2 class="fade-in">AI Generated Images</h2>
             <div class="gallery-grid"></div>
         </section>
+
+
+        <section id="music" class="gallery-section">
+            <h2 class="fade-in">AI Generated Music</h2>
+            <div class="gallery-grid audio-grid"></div>
+        </section>
     </main>
 
 
@@ -46,12 +53,64 @@
     </footer>
 
 
-    <script src="https://unpkg.com/lenis@1.0.16/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/dist/lenis.min.js"></script>
 
+    <!-- 数据 -->
     <script src="data/gallery-data.js"></script>
-    <script src="js/modules/utils.js"></script>
-    <script src="js/modules/gallery.js"></script>
+    
+    <!-- 自定义模块 -->
+    <script src="js/modules/Gallery.js"></script>
+    <script src="js/modules/AudioPlayer.js"></script>
+    <script src="js/modules/AudioVisualizer.js"></script>
     <script src="js/modules/animations.js"></script>
+    <script src="js/modules/utils.js"></script>
+    
+    <!-- 主脚本 -->
     <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM Content Loaded');
+            
+            try {
+                // Initialize image gallery
+                const imageGallery = document.querySelector('#images .gallery-grid');
+                if (imageGallery) {
+                    console.log('Found image gallery container');
+                    new Gallery(imageGallery, galleryData.images);
+                } else {
+                    console.error('Image gallery container not found');
+                }
+
+                // Initialize audio gallery
+                const audioGallery = document.querySelector('#music .gallery-grid');
+                if (audioGallery) {
+                    console.log('Found audio gallery container');
+                    new AudioPlayer(audioGallery, galleryData.music);
+                } else {
+                    console.error('Audio gallery container not found');
+                }
+
+                // Initialize smooth scroll
+                if (typeof Lenis === 'undefined') {
+                    console.error('Lenis library not loaded');
+                } else {
+                    const lenis = new Lenis({
+                        duration: 1.2,
+                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                    });
+
+                    function raf(time) {
+                        lenis.raf(time);
+                        requestAnimationFrame(raf);
+                    }
+
+                    requestAnimationFrame(raf);
+                }
+            } catch (error) {
+                console.error('Initialization error:', error);
+            }
+        });
+    </script>
 </body>
 </html>
