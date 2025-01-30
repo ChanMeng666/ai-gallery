@@ -55,4 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (audioGallery) {
         new AudioPlayer(audioGallery, galleryData.music);
     }
+
+    // Initialize video gallery
+    const videoGallery = document.querySelector('#videos .gallery-grid');
+    if (videoGallery) {
+        new VideoPlayer(videoGallery, galleryData.videos);
+    }
 });

@@ -35,5 +35,25 @@ const galleryData = {
             duration: '4:12',
             thumbnail: './assets/images/placeholder.jpg'
         }
+    ],
+    videos: [
+        {
+            id: 1,
+            src: './assets/videos/DreamofFlowingWaters.mp4',
+            thumbnail: './assets/images/placeholder.jpg',
+            title: 'Neural Landscapes',
+            description: 'AI generated visual journey through abstract landscapes.',
+            author: 'Stable Video XL',
+            duration: '0:30'
+        },
+        {
+            id: 2,
+            src: './assets/videos/DreamofFlowingWaters.mp4',
+            thumbnail: './assets/images/placeholder.jpg',
+            title: 'Digital Metamorphosis',
+            description: 'Fluid transformations powered by machine learning.',
+            author: 'Runway Gen-2',
+            duration: '0:45'
+        }
     ]
 };

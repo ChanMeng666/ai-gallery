@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/components/modal.css">
     <link rel="stylesheet" href="css/components/footer.css">
     <link rel="stylesheet" href="css/components/audio-player.css">
+    <link rel="stylesheet" href="css/components/video-player.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -33,10 +34,14 @@
             <div class="gallery-grid"></div>
         </section>
 
-
         <section id="music" class="gallery-section">
             <h2 class="fade-in">AI Generated Music</h2>
             <div class="gallery-grid audio-grid"></div>
+        </section>
+
+        <section id="videos" class="gallery-section">
+            <h2 class="fade-in">AI Generated Videos</h2>
+            <div class="gallery-grid video-grid"></div>
         </section>
     </main>
 
@@ -53,7 +58,7 @@
     </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
     <!-- 数据 -->
     <script src="data/gallery-data.js"></script>
@@ -63,6 +68,7 @@
     <script src="js/modules/AudioPlayer.js"></script>
     <script src="js/modules/AudioVisualizer.js"></script>
     <script src="js/modules/animations.js"></script>
+    <script src="js/modules/VideoPlayer.js"></script>
     <script src="js/modules/utils.js"></script>
     
     <!-- 主脚本 -->
