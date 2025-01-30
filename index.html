@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/utils/animations.css">
     <link rel="stylesheet" href="css/components/header.css">
     <link rel="stylesheet" href="css/components/gallery.css">
-    <link rel="stylesheet" href="css/components/modal.css">
-    <link rel="stylesheet" href="css/components/footer.css">
     <link rel="stylesheet" href="css/components/audio-player.css">
     <link rel="stylesheet" href="css/components/video-player.css">
+    <link rel="stylesheet" href="css/components/modal.css">
+    <link rel="stylesheet" href="css/components/footer.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -31,17 +31,17 @@
 
         <section id="images" class="gallery-section">
             <h2 class="fade-in">AI Generated Images</h2>
-            <div class="gallery-grid"></div>
+            <div class="gallery-grid" data-type="images"></div>
         </section>
 
         <section id="music" class="gallery-section">
             <h2 class="fade-in">AI Generated Music</h2>
-            <div class="gallery-grid audio-grid"></div>
+            <div class="gallery-grid" data-type="music"></div>
         </section>
 
         <section id="videos" class="gallery-section">
             <h2 class="fade-in">AI Generated Videos</h2>
-            <div class="gallery-grid video-grid"></div>
+            <div class="gallery-grid" data-type="videos"></div>
         </section>
     </main>
 
@@ -74,7 +74,7 @@
     <!-- 主脚本 -->
     <script src="js/main.js"></script>
 
-    <script>
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', () => {
             console.log('DOM Content Loaded');
             
@@ -117,6 +117,6 @@
                 console.error('Initialization error:', error);
             }
         });
-    </script>
+    </script> -->
 </body>
 </html>
